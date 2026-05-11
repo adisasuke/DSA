@@ -1,0 +1,10 @@
+This is KMP algorithm
+
+
+we are using length = lps[length-1] for efficiency check this String = "ABABABAC"
+
+
+for checking KMP overall use this example :
+
+haystack : "AAAAAAC"
+needle : "AAC"
