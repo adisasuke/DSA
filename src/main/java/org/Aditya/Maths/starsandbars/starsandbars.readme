@@ -1,0 +1,59 @@
+STARS AND BARS
+
+Given:
+x1 + x2 + ... + xk = n
+
+
+1. CASE: xi >= 0
+
+Answer:
+C(n + k - 1, k - 1)
+
+
+2. CASE: xi >= 1
+
+Subtract 1 from every variable:
+
+yi = xi - 1
+
+Then:
+y1 + y2 + ... + yk = n - k
+
+Answer:
+C(n - 1, k - 1)
+
+
+3. GENERIC CASE: xi >= p
+
+Subtract p from every variable:
+
+yi = xi - p
+
+Then:
+y1 + y2 + ... + yk = n - k*p
+
+Apply Case 1:
+
+Answer:
+C(n - k*p + k - 1, k - 1)
+
+Valid only when:
+n >= k*p
+
+Otherwise:
+0 solutions.
+
+
+KEY TRICK
+
+Subtract the minimum p from every variable,
+then apply the xi >= 0 formula.
+
+
+QUICK REFERENCE
+
+xi >= 0  ->  C(n + k - 1, k - 1)
+
+xi >= 1  ->  C(n - 1, k - 1)
+
+xi >= p  ->  C(n - k*p + k - 1, k - 1)
